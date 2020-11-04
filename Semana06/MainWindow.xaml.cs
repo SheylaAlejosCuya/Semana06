@@ -16,9 +16,7 @@ using System.Windows.Shapes;
 
 namespace Semana06
 {
-    /// <summary>
-    /// Lógica de interacción para MainWindow.xaml
-    /// </summary>
+   
     public partial class MainWindow : Window
     {
         public MainWindow()
@@ -33,15 +31,39 @@ namespace Semana06
             {
                 bPedido = new BPedido();
                 dgvPedido.ItemsSource = bPedido.GetPedidosEntreFechas(Convert.ToDateTime(txtFechaInicio.Text),
-                                                                    Convert.ToDateTime(txtFechaFin.Text));
+                                                                      Convert.ToDateTime(txtFechaFin.Text));
+
             }
             catch (Exception)
             {
-                MessageBox.Show("Comunicarse con el administrador");
+                MessageBox.Show("Comunicarse con el Administrador");
             }
             finally
             {
                 bPedido = null;
+            }
+        }
+
+
+        private void BtnObtenerDetalles_Click(object sender, RoutedEventArgs e)
+        {
+            BDetallePedido bDetallePedido = null;
+            try
+            {
+                bDetallePedido = new BDetallePedido();
+                dgvDetallePedido.ItemsSource = bDetallePedido.GetDetallePedidosPorId(Convert.ToInt32(txtIdPedido.Text));
+
+                txtTotal.Text = Convert.ToString(bDetallePedido.GetDetalleTotalPorId(Convert.ToInt32(txtIdPedido.Text)));
+
+
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Comunicarse con el Administrador");
+            }
+            finally
+            {
+                bDetallePedido = null;
             }
         }
     }

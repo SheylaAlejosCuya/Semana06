@@ -13,7 +13,7 @@ namespace Data
 
 
         public static string Connection { get; } = "Data Source=DESKTOP-0C6FICR\\SQLEXPRESS;" +
-                                                   "Initial Catalog=neptuno;Integrated Security=true";
+                                                   "Initial Catalog=Neptuno;Integrated Security=true";
         /// <summary> 
         /// Set the connection, command, and then execute the command with non query. 
         /// </summary> 

@@ -32,12 +32,12 @@ namespace Semana06
         }
         private void Cargar()
         {
-            BCategoria Bcategoria = null;
+            BCategoria BCategoria = null;
             try
             {
                 //Listar categorias
-                Bcategoria = new BCategoria();
-                dgvCategoria.ItemsSource = Bcategoria.Listar(0);
+                BCategoria = new BCategoria();
+                dgvCategoria.ItemsSource = BCategoria.Listar(0);
 
             }catch(Exception)
             {
@@ -45,7 +45,7 @@ namespace Semana06
             }
             finally
             {
-                Bcategoria = null;
+                BCategoria = null;
             }
         }
         private void BtnNuevo_Click(object sender, RoutedEventArgs e)

@@ -17,7 +17,7 @@ namespace Bussines
             try
             {
                 DDetallePedido = new DDetallePedido();
-                DetallePedidos = DDetallePedido.GetDetallePedidos(new DetallePedido { Pedido = new Pedido { IdPedido = IdPedido } });
+                DetallePedidos = DDetallePedido.GetDetallePedidos(new DetallePedido { IdPedido = IdPedido });
 
             }
             catch (Exception ex)
@@ -37,7 +37,7 @@ namespace Bussines
             try
             {
                 DDetallePedido = new DDetallePedido();
-                DetallePedidos = DDetallePedido.GetDetallePedidos(new DetallePedido { Pedido = new Pedido { IdPedido = IdPedido } });
+                DetallePedidos = DDetallePedido.GetDetallePedidos(new DetallePedido{ IdPedido = IdPedido });
 
                 foreach (var item in DetallePedidos)
                 {

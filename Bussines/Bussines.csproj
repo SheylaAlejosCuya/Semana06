@@ -44,6 +44,7 @@
     <Compile Include="BCategoria.cs" />
     <Compile Include="BDetallePedido.cs" />
     <Compile Include="BPedido.cs" />
+    <Compile Include="BProductos.cs" />
     <Compile Include="Class1.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

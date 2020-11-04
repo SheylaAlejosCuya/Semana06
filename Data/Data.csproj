@@ -45,6 +45,7 @@
     <Compile Include="DCategoria.cs" />
     <Compile Include="DDetallePedido.cs" />
     <Compile Include="DPedido.cs" />
+    <Compile Include="DProducto.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SQLHelper.cs" />
   </ItemGroup>
